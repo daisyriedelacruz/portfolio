@@ -31,14 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
         );
         successModal.show();
       } else {
-        alert(
-          "Oops! There was a problem submitting your form. Please try again.",
-        );
+        alert("There was a problem submitting your form. Please try again.");
       }
     } catch (error) {
       console.log(error);
       alert(
-        "Oops! Network error. Please check your connection or email me directly.",
+        "Network error. Please check your connection or email me directly.",
       );
     } finally {
       submitBtn.disabled = false;
@@ -64,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const scrollObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Add the active class to trigger CSS transition
+        // Active class to trigger CSS transition
         entry.target.classList.add("active");
 
         // Stop observing once revealed so it stays visible
