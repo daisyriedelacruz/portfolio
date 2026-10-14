@@ -144,7 +144,7 @@ body {
 /* STICKER STAMP ANIMATION */
 .journal-title-stamp {
   font-family: "Pacifico", cursive;
-  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  font-size: 4rem;
   display: inline-block;
   padding: 18px 24px;
   border-radius: 20px;
