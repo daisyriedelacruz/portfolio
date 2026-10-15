@@ -74,3 +74,43 @@ document.addEventListener("DOMContentLoaded", function () {
   // Attach observer to each element
   animatedElements.forEach((el) => scrollObserver.observe(el));
 });
+
+// Typing Animation
+const typingText = document.getElementById("typing-text");
+
+const titles = ["Full Stack Developer", "Educator"];
+
+let titleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+  const currentTitle = titles[titleIndex];
+
+  if (isDeleting) {
+    charIndex--;
+  } else {
+    charIndex++;
+  }
+
+  typingText.textContent = currentTitle.substring(0, charIndex);
+
+  let speed = isDeleting ? 50 : 100;
+
+  // Pause after finishing a word
+  if (!isDeleting && charIndex === currentTitle.length) {
+    speed = 1500;
+    isDeleting = true;
+  }
+
+  // Move to the next title after deleting
+  if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    titleIndex = (titleIndex + 1) % titles.length;
+    speed = 400;
+  }
+
+  setTimeout(typeEffect, speed);
+}
+
+typeEffect();

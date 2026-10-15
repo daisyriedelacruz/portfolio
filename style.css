@@ -97,7 +97,6 @@ body {
   color: #6c5b7b;
 }
 
-/* TYPOGRAPHY */
 .section-title {
   font-family: "Pacifico", cursive;
   font-size: clamp(1.75rem, 4vw, 2.25rem);
@@ -135,44 +134,40 @@ body {
   background-color: #f8f9fa;
 }
 
-.hero-caption {
+/* INTRO*/
+.journal-title {
   font-family: "Pacifico", cursive;
-  font-size: 1.3rem;
-  color: #6c5b7b;
-}
-
-/* STICKER STAMP ANIMATION */
-.journal-title-stamp {
-  font-family: "Pacifico", cursive;
-  font-size: 3rem;
+  font-size: 4rem;
+  margin-bottom: 1.5rem !important;
   display: inline-block;
-  padding: 18px 24px;
-  border-radius: 20px;
   color: #6c5b7b;
-  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-  border: 2px dashed rgba(108, 91, 123, 0.2);
-  opacity: 0;
-  transform: scale(3) rotate(-10deg);
-  animation: stickerStamp 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  animation-delay: 0.1s;
+}
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #6c5b7b !important;
 }
 
-@keyframes stickerStamp {
-  0% {
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% {
     opacity: 0;
-    transform: scale(2.8) rotate(-12deg);
   }
-  70% {
-    opacity: 1;
-    transform: scale(0.92) rotate(3deg);
-  }
-  85% {
-    transform: scale(1.05) rotate(-2deg);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) rotate(-2deg);
-  }
+}
+
+#intro-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 600px;
+  /* border: 2px dashed rgba(108, 91, 123, 0.2);
+  padding: 18px 24px;
+  border-radius: 20px; */
 }
 
 /* BUTTONS */
@@ -392,10 +387,6 @@ body {
 }
 .pastel-mint {
   background-color: #d5f4e6;
-}
-
-.pastel-pink-badge {
-  background-color: #f8c8dc;
 }
 
 .tape {
